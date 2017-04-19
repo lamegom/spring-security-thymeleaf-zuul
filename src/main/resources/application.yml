@@ -1,0 +1,16 @@
+ribbon.eureka.enabled: false
+
+zuul.debug.request: true
+zuul:
+  prefix: /api/v*
+  strip-prefix: false
+  routes:
+    apis:
+      path: /**
+      url: http://localhost:9098
+logging:
+  level: trace
+
+management:
+  security:
+    enabled: false
